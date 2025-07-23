@@ -1,21 +1,22 @@
-# TIC80 C Language Template
+# TIC80 Space Freight
 
-## Difference comparing to official template
+## Space Freight Game
 
-This template **doesn't** require `wasi-sdk`.
+...
+### Pallete
+
+* [Computer Chip y Palette](https://lospec.com/palette-list/computer-chip-y)
+* [T-Lollipop Palette](https://lospec.com/palette-list/t-lollipop)
+* [PurpleDawn Palette](https://lospec.com/palette-list/purpledawn)
+* [FunkyFuture 8 Palette](https://lospec.com/palette-list/funkyfuture-8)
+
+## Compile
+
+This repo **doesn't** require `wasi-sdk`.
 All your need is `clang`(C language family frontend for LLVM),
 `lld`(wasm-ld from the LLVM project), `llvm`(llvm-ar tools from the LLVM project)
 and `tic80` packages.
 
-The advantage of not using `wasi-sdk` is:
-
-* Won't invoke `WASI` api by mistake, which is **not** provided by `tic80`.
-* No extra dependencies. Have a minimal `libc` (modified from wasi-sdk source).
-
-## Useage
-
-* Clone this template.
-* Modify `Makefile`, change `TARGET_NAME` to project name.
 * Compile only the wasm part: `make clean && make wasm`
 * Compile and make the cart: `make clean && make cart`
 * Compile and run the cart: `make clean && DEBUG=1 make run`

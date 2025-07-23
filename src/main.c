@@ -8,7 +8,7 @@
 
 static int x, y, t;
 static int r = 0;
-static uint8_t transcolors = { 14 };
+static uint8_t transcolors = { 0 };
 
 void init_heap(void) {
     size_t mems = _init_memory(4);
@@ -39,7 +39,7 @@ void TIC() {
     if (btn(3)) {
         x ++;
     }
-    cls(13);
+    cls(0);
     spr(1 + t%60 / 30 * 2, x, y, &transcolors, 1, 3, 0, 0, 2, 2);
     t ++;
 

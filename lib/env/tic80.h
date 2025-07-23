@@ -19,16 +19,16 @@ extern "C" {
 #define TILE_SIZE 8
 
 // How many pixels wide the screen is.
-#define WIDTH 240
+#define SCR_WIDTH 240
 
 // How many pixels tall the screen is.
-#define HEIGHT 136
+#define SCR_HEIGHT 136
 
 // How many tiles wide the screen is.
-#define WIDTH_TILES (WIDTH / TILE_SIZE)
+#define WIDTH_TILES (SCR_WIDTH / TILE_SIZE)
 
 // How many tiles tall the screen is.
-#define HEIGHT_TILES (HEIGHT / TILE_SIZE)
+#define HEIGHT_TILES (SCR_HEIGHT / TILE_SIZE)
 
 // How many bits-per-pixel.
 #define BPP 4
@@ -145,7 +145,7 @@ enum BUTTON_CODES {
 
 // Video RAM.
 typedef struct {
-    uint8_t SCREEN[WIDTH * HEIGHT * BPP / 8];
+    uint8_t SCREEN[SCR_WIDTH * SCR_HEIGHT * BPP / 8];
     uint8_t PALETTE[48];                       // 16 colors.
     uint8_t PALETTE_MAP[8];                    // 16 indices.
     uint8_t BORDER_COLOR_AND_OVR_TRANSPARENCY; // Bank 0 is border color, bank 1

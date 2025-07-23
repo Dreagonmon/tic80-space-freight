@@ -4,7 +4,7 @@
 BUILD = build
 LIB_BUILD = build/lib
 LIBC_A = $(LIB_BUILD)/libc.a
-TARGET_NAME = demo
+TARGET_NAME = space_freight
 TARGET_WAT = $(BUILD)/$(TARGET_NAME).wat
 TARGET_WASM = $(BUILD)/$(TARGET_NAME).wasm
 TARGET_CART = $(BUILD)/$(TARGET_NAME).tic
@@ -56,6 +56,7 @@ CFLAGS += -Os
 endif
 # include header
 CFLAGS += -Isrc
+CFLAGS += -Ilib/fptc
 CFLAGS += -Ilib/env
 CFLAGS += -Ilib/libc
 
